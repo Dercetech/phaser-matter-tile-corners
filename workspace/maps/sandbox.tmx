@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <editorsettings>
+  <export target="../../src/assets/sandbox.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="5" columns="5">
+  <image source="../../public/assets/tiles.png" width="80" height="16"/>
+  <tile id="0">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3" probability="0.1"/>
+  <tile id="4" probability="0.1"/>
+ </tileset>
+ <layer id="1" name="monolayer" width="16" height="15">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,3,3,3,3,3,3,3,3,5,3,5,3,3,3,1,
+1,3,3,3,3,5,3,3,3,3,3,3,3,3,3,1,
+1,4,3,3,3,3,3,3,3,3,3,5,3,3,3,1,
+1,3,4,3,3,3,3,3,4,3,3,3,5,3,4,1,
+1,3,3,3,3,5,3,3,3,3,4,3,4,3,5,1,
+1,3,3,3,5,3,5,5,3,5,4,3,5,3,3,1,
+1,3,3,3,3,3,3,5,4,3,3,3,3,3,3,1,
+1,3,4,4,3,3,3,4,3,3,3,4,3,3,3,1,
+1,3,3,3,3,3,4,5,3,3,3,5,3,4,3,1,
+1,3,3,5,3,3,3,3,3,3,3,3,3,3,3,1,
+1,4,4,3,4,5,3,4,5,3,3,3,5,3,5,1,
+1,3,3,3,3,3,5,3,3,5,3,3,3,3,3,1,
+1,3,5,3,3,3,3,3,3,3,3,5,3,5,3,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+</map>

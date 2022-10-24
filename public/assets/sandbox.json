@@ -1,0 +1,73 @@
+{ "compressionlevel":-1,
+ "height":15,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 3, 3, 3, 3, 3, 3, 3, 3, 5, 3, 5, 3, 3, 3, 1,
+            1, 3, 3, 3, 3, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1,
+            1, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 3, 3, 3, 1,
+            1, 3, 4, 3, 3, 3, 3, 3, 4, 3, 3, 3, 5, 3, 4, 1,
+            1, 3, 3, 3, 3, 5, 3, 3, 3, 3, 4, 3, 4, 3, 5, 1,
+            1, 3, 3, 3, 5, 3, 5, 5, 3, 5, 4, 3, 5, 3, 3, 1,
+            1, 3, 3, 3, 3, 3, 3, 5, 4, 3, 3, 3, 3, 3, 3, 1,
+            1, 3, 4, 4, 3, 3, 3, 4, 3, 3, 3, 4, 3, 3, 3, 1,
+            1, 3, 3, 3, 3, 3, 4, 5, 3, 3, 3, 5, 3, 4, 3, 1,
+            1, 3, 3, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1,
+            1, 4, 4, 3, 4, 5, 3, 4, 5, 3, 3, 3, 5, 3, 5, 1,
+            1, 3, 3, 3, 3, 3, 5, 3, 3, 5, 3, 3, 3, 3, 3, 1,
+            1, 3, 5, 3, 3, 3, 3, 3, 3, 3, 3, 5, 3, 5, 3, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+         "height":15,
+         "id":1,
+         "name":"monolayer",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":16,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":2,
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.9.2",
+ "tileheight":16,
+ "tilesets":[
+        {
+         "columns":5,
+         "firstgid":1,
+         "image":"tiles.png",
+         "imageheight":16,
+         "imagewidth":80,
+         "margin":0,
+         "name":"tiles",
+         "spacing":0,
+         "tilecount":5,
+         "tileheight":16,
+         "tiles":[
+                {
+                 "id":0,
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"bool",
+                         "value":true
+                        }]
+                }, 
+                {
+                 "id":3,
+                 "probability":0.100000001490116
+                }, 
+                {
+                 "id":4,
+                 "probability":0.100000001490116
+                }],
+         "tilewidth":16
+        }],
+ "tilewidth":16,
+ "type":"map",
+ "version":"1.9",
+ "width":16
+}
