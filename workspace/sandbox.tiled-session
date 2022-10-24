@@ -1,0 +1,55 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "maps/bircks.tmx": {
+            "scale": 3.87421875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 128.02581165557575,
+                "y": 120.02419842710228
+            }
+        },
+        "maps/bircks.tmx#tiles": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "maps/sandbox.tmx": {
+            "scale": 3.8445312499999997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 135.77728104043896,
+                "y": 114.96850233692341
+            }
+        },
+        "maps/sandbox.tmx#tiles": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "/Users/jem/Desktop/workspace/phaser-sandbox/base 2/public/assets",
+    "last.imagePath": "/Users/jem/Desktop/workspace/phaser-sandbox/base 2/public/assets",
+    "map.height": 16,
+    "map.lastUsedExportFilter": "All Files (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 16,
+    "openFiles": [
+    ],
+    "project": "sandbox.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "maps/bircks.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
