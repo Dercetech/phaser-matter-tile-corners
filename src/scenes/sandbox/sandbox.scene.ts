@@ -72,7 +72,7 @@ export class SanboxScene extends BoilerplateScene {
     this.add.bitmapText(CONSOLE.CONSOLE_X - 2, 4, CONSOLE.ATARI, this.levelData.title, 8).setTint(0xbfca87);
 
     // Watches
-    this.logVelocity(0, 0);
+    this.logVelocity();
     this.logPaddle();
   }
 
