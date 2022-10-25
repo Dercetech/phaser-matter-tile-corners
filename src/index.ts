@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 
 import * as scenes from "./scenes";
+import { BootLoader } from "./scenes/bootloader.scene";
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
@@ -12,7 +13,7 @@ const config: Phaser.Types.Core.GameConfig = {
     // width: 960,
     // height: 720,
   },
-  backgroundColor: "#0FF00",
+  backgroundColor: "#000000",
   parent: "phaser-example",
   physics: {
     default: "matter",
@@ -22,7 +23,7 @@ const config: Phaser.Types.Core.GameConfig = {
     },
   },
   pixelArt: true,
-  scene: [scenes.SanboxScene],
+  scene: [scenes.BootLoader, scenes.SanboxScene],
 };
 
 new Phaser.Game(config);

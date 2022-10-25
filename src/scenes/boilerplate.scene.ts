@@ -1,11 +1,10 @@
+import { AtariFont } from "../asset-meta";
 import { PhaserMatterTileBody, GameData } from "../models";
-
 enum REGISTRY_KEYS {
   GAME_STATE = "_state",
 }
 
 export enum CONSOLE {
-  ATARI = "atari",
   CONSOLE_X = 262,
   CONSOLE_TOP = 18,
   CONSOLE_LINEHEIGHT = 10,
@@ -39,9 +38,7 @@ export class BoilerplateScene extends Phaser.Scene {
     }
   }
 
-  preload() {
-    this.load.bitmapFont(CONSOLE.ATARI, "assets/atari-classic.png", "assets/atari-classic.xml");
-  }
+  preload() {}
 
   create() {}
 
@@ -64,7 +61,7 @@ export class BoilerplateScene extends Phaser.Scene {
       }
     });
 
-    const bmpText = this.add.bitmapText(CONSOLE.CONSOLE_X, CONSOLE.CONSOLE_TOP, CONSOLE.ATARI, line, 8);
+    const bmpText = this.add.bitmapText(CONSOLE.CONSOLE_X, CONSOLE.CONSOLE_TOP, AtariFont.key, line, 8);
     this._consoleLines.unshift(bmpText);
   }
 

@@ -25,6 +25,9 @@ export enum KEYS {
 
   RUNTIME_DATA = "_runtime",
 
+  SCENE = "SandboxScene",
+  LEVEL = "level",
+
   TILEMAP = "tilemap",
   TILEMAP_MONOLAYER = "monolayer",
   TILESET = "tiles",

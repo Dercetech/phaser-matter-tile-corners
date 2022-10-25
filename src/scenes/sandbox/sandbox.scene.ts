@@ -1,3 +1,6 @@
+import { AtariFont } from "../../asset-meta/fonts.meta";
+import { getUrlParam, setUrlParameter } from "../../utils";
+
 import { BoilerplateScene, CONSOLE } from "../boilerplate.scene";
 
 import { KEYS, SPRITES, CONSTANTS } from "./sandbox.constants";
@@ -6,7 +9,7 @@ import { PaddleData, SceneState } from "./sandbox.models";
 
 export class SanboxScene extends BoilerplateScene {
   constructor() {
-    super("SandboxScene");
+    super(KEYS.SCENE);
   }
 
   protected get state() {
@@ -31,6 +34,18 @@ export class SanboxScene extends BoilerplateScene {
 
   init() {
     super.init();
+
+    try {
+      const levelIndex = parseInt(getUrlParam(KEYS.LEVEL));
+      if (levelIndex >= 0 && levelIndex < levels.length) {
+        this.gameState.levelIndex = levelIndex;
+      } else {
+        setUrlParameter(KEYS.LEVEL, 0);
+        this.gameState.levelIndex = 0;
+      }
+    } catch (e: any) {
+      // Ignore, no param was issued by URL
+    }
 
     const startingRuntimeData: SceneState = {
       started: false,
@@ -69,7 +84,7 @@ export class SanboxScene extends BoilerplateScene {
     this.add.image(256, 0, SPRITES.HUD).setOrigin(0, 0);
 
     // Title
-    this.add.bitmapText(CONSOLE.CONSOLE_X - 2, 4, CONSOLE.ATARI, this.levelData.title, 8).setTint(0xbfca87);
+    this.add.bitmapText(CONSOLE.CONSOLE_X - 2, 4, AtariFont.key, this.levelData.title, 8).setTint(0xbfca87);
 
     // Watches
     this.logVelocity();
@@ -167,7 +182,7 @@ export class SanboxScene extends BoilerplateScene {
     let bmpText = this.children.getByName(KEYS.TXT_VELOCITY) as Phaser.GameObjects.BitmapText;
     if (!bmpText) {
       bmpText = this.add
-        .bitmapText(CONSOLE.CONSOLE_X, CONSTANTS.CONSOLE_VELOCITY_Y, CONSOLE.ATARI, "", 8)
+        .bitmapText(CONSOLE.CONSOLE_X, CONSTANTS.CONSOLE_VELOCITY_Y, AtariFont.key, "", 8)
         .setTint(0xbfca87)
         .setName(KEYS.TXT_VELOCITY);
     }
@@ -183,7 +198,7 @@ export class SanboxScene extends BoilerplateScene {
     let bmpText = this.children.getByName(KEYS.TXT_PADDLE_X) as Phaser.GameObjects.BitmapText;
     if (!bmpText) {
       bmpText = this.add
-        .bitmapText(CONSOLE.CONSOLE_X, CONSTANTS.CONSOLE_PADDLE_Y, CONSOLE.ATARI, "", 8)
+        .bitmapText(CONSOLE.CONSOLE_X, CONSTANTS.CONSOLE_PADDLE_Y, AtariFont.key, "", 8)
         .setTint(0xbfca87)
         .setName(KEYS.TXT_PADDLE_X);
     }
@@ -196,7 +211,7 @@ export class SanboxScene extends BoilerplateScene {
 
   // Event & input handling //
 
-  protected onClick(evt) {
+  protected onClick(evt: any) {
     this.input.mouse.requestPointerLock();
 
     if (this.state.started) {
@@ -206,7 +221,7 @@ export class SanboxScene extends BoilerplateScene {
     }
   }
 
-  protected onPointerMove(evt) {
+  protected onPointerMove(evt: any) {
     // use evet.velocity.x and .y in default mode (not locked)
     // console.log(evt.velocity.x + ", " + evt.velocity.y);
 
@@ -225,6 +240,7 @@ export class SanboxScene extends BoilerplateScene {
     if (this.gameState.levelIndex < 0) {
       this.gameState.levelIndex = levels.length - 1;
     }
+    setUrlParameter(KEYS.LEVEL, this.gameState.levelIndex);
     this.scene.restart();
   }
 
@@ -233,6 +249,7 @@ export class SanboxScene extends BoilerplateScene {
     if (this.gameState.levelIndex >= levels.length) {
       this.gameState.levelIndex = 0;
     }
+    setUrlParameter(KEYS.LEVEL, this.gameState.levelIndex);
     this.scene.restart();
   }
 
