@@ -3,19 +3,33 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "maps/bircks.tmx",
     "expandedProjectPaths": [
+        "maps",
+        "."
     ],
     "fileStates": {
         "maps/bircks.tmx": {
             "scale": 3.87421875,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 128.02581165557575,
-                "y": 120.02419842710228
+                "x": 147.77172817100225,
+                "y": 136.28554143980642
             }
         },
         "maps/bircks.tmx#tiles": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "maps/islands.tmx": {
+            "scale": 4.100833333333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 128.14468603942288,
+                "y": 120.21946758788864
+            }
+        },
+        "maps/islands.tmx#tiles": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -23,8 +37,8 @@
             "scale": 3.8445312499999997,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 135.77728104043896,
-                "y": 114.96850233692341
+                "x": 134.08656777077834,
+                "y": 130.57508636456006
             }
         },
         "maps/sandbox.tmx#tiles": {
@@ -41,10 +55,13 @@
     "map.tileWidth": 16,
     "map.width": 16,
     "openFiles": [
+        "maps/sandbox.tmx",
+        "maps/bircks.tmx"
     ],
     "project": "sandbox.tiled-project",
-    "property.type": "bool",
+    "property.type": "string",
     "recentFiles": [
+        "maps/sandbox.tmx",
         "maps/bircks.tmx"
     ],
     "tileset.embedInMap": true,

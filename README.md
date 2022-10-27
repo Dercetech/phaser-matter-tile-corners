@@ -2,4 +2,4 @@
 
 Test web build:
 
-[dercetech.com/test/phaser-matter-sandbox/v1.0.0/](https://www.dercetech.com/test/phaser-matter-sandbox/v1.0.0/)
+[dercetech.com/test/phaser-matter-sandbox/v2.0.0/](https://www.dercetech.com/test/phaser-matter-sandbox/v2.0.0/)
