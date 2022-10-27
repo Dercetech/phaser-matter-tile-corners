@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2022-10-27
+
+### Fixed
+
+F001 - Added missing COLLISION_CATEGORY in sandbox.tmx level (shows the issue)
+
 ## [2.0.0] - 2022-10-27
 
 ### Added

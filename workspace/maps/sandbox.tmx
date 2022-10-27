@@ -3,10 +3,11 @@
  <editorsettings>
   <export target="../../src/assets/sandbox.json" format="json"/>
  </editorsettings>
- <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="5" columns="5">
-  <image source="../../public/assets/tiles.png" width="80" height="16"/>
+ <tileset firstgid="1" name="tiles" tilewidth="16" tileheight="16" tilecount="9" columns="9">
+  <image source="../../public/assets/tiles.png" width="144" height="16"/>
   <tile id="0">
    <properties>
+    <property name="COLLISION_CATEGORY" value="BOUNCY"/>
     <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
