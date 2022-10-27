@@ -5,4 +5,6 @@ export type PhaserMatterTileBody = Phaser.Physics.Matter.Components.Bounce &
   Phaser.Physics.Matter.Components.Mass &
   Phaser.Physics.Matter.Components.Sensor &
   Phaser.Physics.Matter.Components.Sleep &
-  Phaser.Physics.Matter.Components.Static;
+  Phaser.Physics.Matter.Components.Static & {
+    body: MatterJS.BodyType;
+  };

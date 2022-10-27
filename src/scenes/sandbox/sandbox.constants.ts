@@ -1,6 +1,7 @@
 export enum CONSTANTS {
   CONSOLE_VELOCITY_Y = 162,
   CONSOLE_PADDLE_Y = 182,
+  CONSOLE_COLLIDES_WITH_Y = 202,
 
   MOUSE_SENSITIVITY = 5,
 
@@ -34,4 +35,5 @@ export enum KEYS {
 
   TXT_VELOCITY = "txtVelocity",
   TXT_PADDLE_X = "txtPaddle",
+  TXT_COLLIDES_WITH = "txtCollidesWith",
 }

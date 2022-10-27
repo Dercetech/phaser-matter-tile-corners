@@ -110,4 +110,28 @@ export class BoilerplateScene extends Phaser.Scene {
   protected showPhysics() {
     this.matter.world.drawDebug = true;
   }
+
+  protected getEntityFromCollisionData(data: Phaser.Types.Physics.Matter.MatterCollisionData, entityDataKey: string) {
+    let targetEntity: any;
+    let otherEntity: any;
+
+    const { bodyA, bodyB } = data;
+    if (bodyA.gameObject && bodyA.gameObject.data && bodyA.gameObject.data.get("type") === entityDataKey) {
+      targetEntity = bodyA.gameObject;
+
+      if (bodyB.gameObject) {
+        otherEntity = bodyB.gameObject;
+      }
+    }
+
+    if (bodyB.gameObject && bodyB.gameObject.data && bodyB.gameObject.data.get("type") === entityDataKey) {
+      targetEntity = bodyB.gameObject;
+
+      if (bodyA.gameObject) {
+        otherEntity = bodyA.gameObject;
+      }
+    }
+
+    return { targetEntity, otherEntity };
+  }
 }
